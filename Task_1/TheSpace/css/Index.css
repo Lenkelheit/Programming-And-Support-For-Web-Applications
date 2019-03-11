@@ -1,0 +1,190 @@
+﻿body {
+    margin: 5px;
+    background-image: url(../img/background_space.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #00D1FF;
+}
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    max-width: 1500px;
+}
+
+.content {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.header {
+    color: #00D1FF;
+    font-family: sans-serif;
+    font-size: 200%;
+    text-align: center;
+}
+
+.footer {
+    color: #00D1FF;
+    font-family: sans-serif;
+    font-size: 100%;
+    text-align: center;
+}
+
+#planets-slide {
+    margin: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.fig-caption,
+h2 {
+    text-align: center;
+}
+
+.above-all-panel {
+    margin: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    left: 20%;
+    right: 20%;
+}
+
+.planet {
+    margin: 5px;
+}
+
+.planet img {
+    display: block;
+    height: 240px;
+    min-width: 240px;
+    opacity: 1;
+}
+
+.planet:hover img {
+    opacity: 0.7;
+}
+
+.border-top {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-color: blueviolet !important;
+}
+
+.border-bottom {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-color: blueviolet !important;
+}
+
+.carousel-config {
+    border: 3px solid limegreen;
+}
+
+.carousel-config img {
+    width: 1900px;
+    height: 800px;
+}
+
+.carousel-caption,
+.blockquote-footer {
+    z-index: 0;
+    font-size: 150%;
+    color: #00D1FF;
+}
+
+.carousel-indicators {
+    z-index: 1;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%2300D1FF' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+    width: 100px;
+    height: 100px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%2300D1FF' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+    width: 100px;
+    height: 100px;
+}
+
+#rockets-slide,
+#feedbacks-slide {
+    margin: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    background-color: black;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.rocket {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    justify-items: center;
+    align-items: center;
+    border-color: #00D1FF !important;
+}
+
+.rocket-image {
+    max-height: 310px;
+    max-width: 310px;
+}
+
+.feedback-card {
+    padding: 10px;
+    border-color: limegreen !important;
+}
+
+.feedback-company-photo {
+    margin: 10px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.feedback-company-chairman,
+.label-config {
+    color: #00D1FF;
+    font-size: 150%;
+}
+
+.feedback-company {
+    color: #00D1FF;
+    font-size: 125%;
+}
+
+.feedback-company-text {
+    color: snow;
+}
+
+#order-form-slide {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+}
+
+.form-check-top {
+    margin-top: -3px;
+}
+
+.button-submit {
+    margin-bottom: 10px;
+}
