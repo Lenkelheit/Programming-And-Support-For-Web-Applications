@@ -75,8 +75,20 @@ h2 {
     opacity: 0.7;
 }
 
+.border-top {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-color: blueviolet !important;
+}
+
+.border-bottom {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-color: blueviolet !important;
+}
+
 .carousel-config {
-    border: 3px solid #00D1FF;
+    border: 3px solid limegreen;
 }
 
 .carousel-config img {
@@ -112,7 +124,8 @@ h2 {
     color: #00D1FF;
 }
 
-#rockets-slide {
+#rockets-slide,
+#feedbacks-slide {
     margin: 10px;
     display: grid;
     grid-gap: 5px;
@@ -120,12 +133,6 @@ h2 {
     background-color: black;
     justify-items: stretch;
     align-items: stretch;
-}
-
-.border-top {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-color: blueviolet !important;
 }
 
 .rocket {
@@ -140,6 +147,31 @@ h2 {
 .rocket-image {
     max-height: 310px;
     max-width: 310px;
+}
+
+.feedback-card {
+    padding: 10px;
+    border-color: limegreen !important;
+}
+
+.feedback-company-photo {
+    margin: 10px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.feedback-company-chairman {
+    color: #00D1FF;
+    font-size: 150%;
+}
+
+.feedback-company {
+    color: #00D1FF;
+    font-size: 125%;
+}
+
+.feedback-company-text {
+    color: snow;
 }
 
 /*
