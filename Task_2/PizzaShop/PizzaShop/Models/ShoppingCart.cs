@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using PizzaShop.Models.Entities;
 using PizzaShop.Models;
 
-namespace OnlinePizzaWebApplication.Models
+namespace PizzaShop.Models
 {
     public class ShoppingCart
     {

@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using OnlinePizzaWebApplication.Models;
+using PizzaShop.Models;
 using Microsoft.EntityFrameworkCore;
 using PizzaShop.Data;
+using OnlinePizzaWebApplication.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using PizzaShop.Models.Entities;
+using PizzaShop.Repositories.Interfaces;
+using PizzaShop.Repositories;
 
 namespace PizzaShop
 {
@@ -31,6 +34,11 @@ namespace PizzaShop
             services.AddIdentity<IdentityUser, IdentityRole>()
                     .AddEntityFrameworkStores<AppDbContext>()
                     .AddDefaultTokenProviders();
+
+            services.AddTransient<IPizzaRepository, PizzaRepository>();
+            services.AddTransient<IEntityRepository<Category>, CategoryRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IAdminRepository, AdminRepository>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
@@ -81,6 +89,7 @@ namespace PizzaShop
 
             if (env.IsDevelopment())
             {
+                app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
