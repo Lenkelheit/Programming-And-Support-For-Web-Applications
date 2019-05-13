@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OnlinePizzaWebApplication.ViewModels
+namespace PizzaShop.ViewModels
 {
     public class ShoppingCartViewModel
     {
