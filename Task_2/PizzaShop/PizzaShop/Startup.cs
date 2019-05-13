@@ -7,12 +7,11 @@ using Microsoft.Extensions.Logging;
 using PizzaShop.Models;
 using Microsoft.EntityFrameworkCore;
 using PizzaShop.Data;
-using OnlinePizzaWebApplication.Repositories;
+using PizzaShop.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using PizzaShop.Models.Entities;
 using PizzaShop.Repositories.Interfaces;
-using PizzaShop.Repositories;
 
 namespace PizzaShop
 {

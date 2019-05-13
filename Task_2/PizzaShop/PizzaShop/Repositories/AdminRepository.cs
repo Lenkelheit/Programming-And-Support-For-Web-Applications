@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using PizzaShop.Repositories.Interfaces;
 
-namespace OnlinePizzaWebApplication.Repositories
+namespace PizzaShop.Repositories
 {
     public class AdminRepository : IAdminRepository
     {
