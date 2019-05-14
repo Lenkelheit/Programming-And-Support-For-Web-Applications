@@ -1,4 +1,19 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+function listSearchExamplesScript() {
 
-// Write your JavaScript code.
+    var value = $("#SearchFieldId").val();
+
+    $.ajax({
+        type: 'GET',
+        url: '/Pizzas/AjaxSearchList',
+        data: { searchString: value }
+    })
+        .done(function (result) {
+            $("#SuggestOutput").html(result);
+            $("#PizzaSummaryId").remove();
+        })
+
+        .fail(function (xhr, status, error) {
+            $("#SuggestOutput").text("No matches where found.");
+        });
+}
